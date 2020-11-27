@@ -60,6 +60,8 @@ body {
   width: 30rem;
   background-color: #fff;
   border-radius: 1rem;
+  box-shadow: 0 14px 28px hsl(185deg 90% 18% / 31%),
+    0 10px 10px rgb(25 162 174 / 19%);
 
   overflow: hidden;
 }
