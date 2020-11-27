@@ -50,10 +50,16 @@ body {
   text-align: center;
 }
 
-.bold {
+.bold,
+h3 {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--very-dark-blue);
+}
+
+.regular {
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 .card {
