@@ -12,6 +12,7 @@
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -26,9 +27,9 @@ body {
 
 .main {
   height: 100vh;
-  /* I discovered some calc magic to make the top svg appear stationary. 😁 */
+  /* I discovered some calc magic to make the top svg responsive. I'm pumped at the discovery but there's probably a more efficient way to skip media queries. */
   background: url(./images/bg-pattern-top.svg) calc((50vw - 100vh)) -50vh no-repeat,
-    url(./images/bg-pattern-bottom.svg) 50vw 50vh no-repeat, var(--dark-cyan);
+    url(./images/bg-pattern-bottom.svg) 50vw 50vh no-repeat var(--dark-cyan);
   background-size: auto 100vh;
 }
 
@@ -48,18 +49,6 @@ body {
 .text-center {
   text-align: center;
 }
-
-/* .p-absolute {
-  position: absolute;
-}
-
-.p-relative {
-  position: relative;
-} */
-
-/* .flex-align-center {
-  align-items: center;
-} */
 
 .bold {
   font-size: 1.8rem;
@@ -96,7 +85,7 @@ hr {
 
 .bio {
   padding: 1rem 0;
-  line-height: calc(1.6rem * 1.5);
+  line-height: 1.5;
 }
 
 .img {
@@ -105,9 +94,8 @@ hr {
 }
 
 .person-image {
-  /* display: block; */
-  width: 8rem;
-  height: 8rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   border: solid 0.5rem #fff;
   overflow: hidden;
@@ -126,16 +114,30 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: calc(1.6rem * 1.4);
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
 }
 
 .attribution {
-  align-self: flex-end;
-  justify-self: center;
-  font-size: 11px;
-  text-align: center;
+  color: #fff;
+  letter-spacing: 0.02rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(56, 100%, 62%);
+  text-decoration: none;
+  border-bottom: 1px solid hsl(56, 100%, 62%);
+  padding: 0.2rem;
+  padding-top: 0.4rem;
+  transition: all 0.2s ease-in;
+}
+
+.attribution a:hover,
+.attribution a:focus,
+.attribution a:focus-visible {
+  color: hsl(53, 33%, 11%);
+  background-color: hsl(66, 100%, 60%);
+  border-bottom: 1px solid hsl(53, 33%, 11%);
 }
