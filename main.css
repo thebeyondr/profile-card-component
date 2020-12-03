@@ -72,9 +72,10 @@ h3 {
   overflow: hidden;
 }
 
-.card__header {
-  display: block;
-  width: 100%;
+.card__banner {
+  background: url("./images/bg-pattern-card.svg");
+  height: 12rem;
+  width: auto;
 }
 
 .card__details {
@@ -84,7 +85,7 @@ h3 {
 
 hr {
   display: block;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   border: 0;
   height: 1px;
   background-color: #efefef;
